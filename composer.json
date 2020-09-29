@@ -1,0 +1,24 @@
+{
+    "name": "piopi/behatcrawler",
+    "description": "A behat Crawler that execute behat function on each page crawled and use Selenium as a webdriver",
+    "type": "behat-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mostapha El Sabah",
+            "email": "elsabah.mostapha@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "behat/mink-selenium2-driver": "*",
+        "behat/behat": "3.*",
+        "behat/mink-extension":"*",
+        "guzzlehttp/psr7": "^1.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Behat\\Crawler\\": "src"
+        }
+    }
+}
