@@ -1,2 +1,2 @@
 # BehatCrawler
-A behat Crawler that execute behat function on each page crawled and use Selenium as a webdriver
+A behat Crawler is a Behat, Mink/Selenium extension that crawl a url and execute user-defined function in each Crawled Page.
