@@ -171,8 +171,10 @@ JS;
                 break;
             }
             else {
-                ob_flush();
+
                 $this->visitUrl((string)$crawlUrl->url);
+                echo "\nCurrent Url:".(string)$crawlUrl->url."\n";
+                ob_flush();
                 try {
                     if (empty($funcParameters)) {
                         call_user_func($function);
