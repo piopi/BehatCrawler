@@ -1,6 +1,6 @@
 # BehatCrawler
 
-The BehatCrawler is [Behat](https://github.com/Behat/Behat),[MinkExtension](https://github.com/Behat/MinkExtension) and [Selenium2Driver](https://github.com/minkphp/MinkSelenium2Driver) extension that crawl a given URL and execute user-defined function in each Crawled Page. 
+The BehatCrawler is a [Behat](https://github.com/Behat/Behat), [MinkExtension](https://github.com/Behat/MinkExtension) and [Selenium2Driver](https://github.com/minkphp/MinkSelenium2Driver) extension that crawls a given URL and executes user-defined functions in each crawled page. 
 
 Multiple options for crawling are available, see [available options](#available).
 
@@ -12,7 +12,7 @@ composer require piopi/behatcrawler
 
 ## Usage
 
-First start by importing the extension, to your Feature Context (or any of your Context):
+Start by importing the extension, to your Feature Context (or any of your Context):
 
 ```php
 use Behat\Crawler\Crawler;
@@ -27,7 +27,7 @@ Create your Crawler object with the default configuration:
 $crawler= New Crawler($this->getSession());
 ```
 
-Or with custom settings (as an array), see the following table for all the available options:
+For custom settings (passed as an array), see the following table for all the [available options](#available).
 
 ```php
 $crawler= New Crawler($this->getSession(),["internalLinksOnly"=>true,"HTMLOnly"=>true,'MaxCrawl'=>20]);
@@ -37,11 +37,11 @@ $crawler= New Crawler($this->getSession(),["internalLinksOnly"=>true,"HTMLOnly"=
 
 | Option            | Description                                                  | Default Value |
 | ----------------- | ------------------------------------------------------------ | ------------- |
-| Depth             | Maximum depth that can be crawled from url                   | 0 (unlimited) |
-| MaxCrawl          | Maximum number of crawl                                      | 0 (unlimited) |
-| HTMLOnly          | Will only crawl html/xhtml pages                             | true          |
-| internalLinksOnly | Will crawl internal links only (links with same Domaine name as the initial url) | true          |
-| waitForCrawl      | Will wait for the crawler to finish crawling before throwing any exception originating from the user defined functions. (Compile a list of all exception founds with their respective location) | false         |
+| Depth             | Maximum depth that can be crawled from URL                   | 0 (unlimited) |
+| MaxCrawl          | Maximum number of crawls                                     | 0 (unlimited) |
+| HTMLOnly          | Will only crawl HTML/xHTML pages                             | true          |
+| internalLinksOnly | Will crawl internal links only (links with same Domaine name as the initial URL) | true          |
+| waitForCrawl      | Will wait for the crawler to finish crawling before throwing any exception originating from the user defined functions. (Compile a list of all exceptions found with their respective location) | false         |
 
 **Option can either be set in the constructor or with the appropriate getters/setters:**
 
