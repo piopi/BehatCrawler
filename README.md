@@ -2,7 +2,7 @@
 
 The BehatCrawler is [Behat](https://github.com/Behat/Behat),[MinkExtension](https://github.com/Behat/MinkExtension) and [Selenium2Driver](https://github.com/minkphp/MinkSelenium2Driver) extension that crawl a given URL and execute user-defined function in each Crawled Page. 
 
-Multiple options for crawling are available, see [available options](#available)
+Multiple options for crawling are available, see [available options](#available).
 
 ## Installation
 
