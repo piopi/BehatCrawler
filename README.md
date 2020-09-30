@@ -1,6 +1,7 @@
 # BehatCrawler
 
 ![PHP Composer](https://github.com/piopi/BehatCrawler/workflows/PHP%20Composer/badge.svg)
+
 The BehatCrawler is a [Behat](https://github.com/Behat/Behat), [MinkExtension](https://github.com/Behat/MinkExtension) and [Selenium2Driver](https://github.com/minkphp/MinkSelenium2Driver) extension that crawls a given URL and executes user-defined functions in each crawled page. 
 
 Multiple options for crawling are available, see [available options](#available).
