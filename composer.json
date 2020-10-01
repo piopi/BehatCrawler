@@ -1,6 +1,6 @@
 {
     "name": "piopi/behatcrawler",
-    "description": "A behat Crawler that execute behat function on each page crawled and use Selenium as a webdriver",
+    "description": "A Behat extension that crawls links on a website and executes user-defined function on each one of them.",
     "type": "behat-extension",
     "license": "MIT",
     "authors": [
