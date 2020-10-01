@@ -61,7 +61,7 @@ class Crawler
     (function myFunction() {
         var urls = [];
         for(var i = document.links.length; i --> 0;)
-        if(document.links[i].hostname === location.hostname && !document.links[i].href.includes('#')){
+        if( !{$this->internalOnly} ||(document.links[i].hostname === location.hostname && !document.links[i].href.includes('#'))){
             urls.push(document.links[i].href);
             }
 	    return urls;
