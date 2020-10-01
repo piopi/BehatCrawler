@@ -142,7 +142,12 @@ JS;
         while ($crawlUrl = $this->crawlQueue->getFirstPendingUrl()) {
             $isHtml=false;
             try {
-
+                stream_context_set_default( [
+                    'ssl' => [
+                        'verify_peer' => false,
+                        'verify_peer_name' => false,
+                    ],
+                ]);
                 $request =get_headers((string) $crawlUrl->url, 1);
                 if(is_array($request)) { //If the page is not reachable $request is not an array
                     if (array_key_exists("Content-Type", $request) || array_key_exists("content-type", $request)) { //check if the Content-type exist in the response header
